@@ -1,20 +1,20 @@
 import React from "react";
 import "./footer.css"; // Make sure to create a corresponding CSS file
-
+import img from "../assets/seth.jpg";
+import { Link } from "react-router-dom";
 const footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-left">
           <div className="logo">
-            <img
-              src="https://via.placeholder.com/50"
-              alt="Intermountain Health Logo"
-            />{" "}
+            <img src={img} alt="Intermountain Health Logo" />{" "}
             {/* Replace with the actual logo URL */}
             <h2>DforDoctor</h2>
           </div>
-          <button className="sign-in-button">Sign in</button>
+          <button className="sign-in-button">
+            <Link to="/HealthDoc_/signup">Sign up</Link>
+          </button>
         </div>
 
         <div className="footer-columns">

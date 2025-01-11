@@ -2,6 +2,7 @@
   padding: 2rem;
   max-width: 1000px;
   margin: 0 auto;
+  border: 3px solid green;
 }
 
 .testimonials-content {

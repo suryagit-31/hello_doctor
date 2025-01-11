@@ -1,9 +1,10 @@
 import React from "react";
-import imgConcern1 from "../assets/Piles.jpeg"; 
-import imgConcern2 from "../assets/skin.jpg"; 
-import imgConcern3 from "../assets/sick_kid.jpeg"; 
-import imgConcern4 from "../assets/stomach.jpeg"; 
+import imgConcern1 from "../assets/Piles.jpeg";
+import imgConcern2 from "../assets/skin.jpg";
+import imgConcern3 from "../assets/sick_kid.jpeg";
+import imgConcern4 from "../assets/stomach.jpeg";
 import styles from "./home.module.css";
+import { NavLink, Link } from "react-router-dom";
 
 function HealthConcernsCarousel() {
   const concerns = [
@@ -47,7 +48,9 @@ function HealthConcernsCarousel() {
           </div>
         ))}
       </div>
-      <button className={styles.seeAllSymptoms}>See All Symptoms</button>
+      <button className={styles.seeAllSymptoms}>
+        <NavLink to="/HealthDoc_/login">See All Symptoms</NavLink>
+      </button>
     </div>
   );
 }

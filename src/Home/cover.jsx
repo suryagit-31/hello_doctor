@@ -9,6 +9,7 @@ import img from "../assets/video_consultation.png";
 import HealthConcernsCarousel from "./HealthConcernsCarousel";
 import TestimonialsCarousel from "./Testimonials";
 import FooterPage from "./footer";
+import { NavLink } from "react-router-dom";
 function Cover() {
   const carouselRef = useRef(null);
   const [index, setIndex] = useState(0);
@@ -72,12 +73,13 @@ function Cover() {
             still see one of our healthcare professionals and pay at the time of
             your visit.
           </p>
-          <button className={styles.videoVisit_button}>Get Care Now</button>
+          <NavLink to="/HealthDoc_/login" className={styles.videoVisit_button}>
+            Get Care Now
+          </NavLink>
         </div>
       </div>
       {/* Use the new HealthConcernsCarousel component */}
       <HealthConcernsCarousel />
-      <TestimonialsCarousel />
       <FooterPage />
     </div>
   );
